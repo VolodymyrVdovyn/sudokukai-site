@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Support for the Sudokukai mobile app." />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#000000"
+    />
+    <title>Support · Sudokukai</title>
+    <link
+      rel="icon"
+      href="../assets/icon-light.png"
+      type="image/png"
+      media="(prefers-color-scheme: light)"
+      data-theme-icon="light"
+    />
+    <link
+      rel="icon"
+      href="../assets/icon-dark.png"
+      type="image/png"
+      media="(prefers-color-scheme: dark)"
+      data-theme-icon="dark"
+    />
+    <script src="../components/theme.js"></script>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+  </head>
+  <body class="support-page">
+    <sudokukai-header current="support"></sudokukai-header>
+
+    <main class="document">
+      <p class="eyebrow">Help and contact</p>
+      <h1>Support</h1>
+      <p class="lead">
+        Help for the current supported release of Sudokukai.
+      </p>
+
+      <h2>Supported version</h2>
+      <p>
+        This page covers Sudokukai 1.0.0 for iOS and Android. You can find the
+        installed app version under Settings → About → App version.
+      </p>
+
+      <h2>Start, pause, and continue a game</h2>
+      <ol>
+        <li>On Home, choose an unlocked level and select <strong>Start</strong>.</li>
+        <li>
+          During a puzzle, select <strong>Pause</strong>. Select
+          <strong>Continue</strong> to return to the board.
+        </li>
+        <li>
+          Sudokukai saves and pauses the current game when the app leaves the
+          foreground. Return to Home and select <strong>Continue</strong> to
+          resume it.
+        </li>
+      </ol>
+
+      <h2>Replace a saved game</h2>
+      <p>
+        Sudokukai keeps one current game. To replace it, choose a level on Home,
+        select <strong>Start</strong>, and confirm the replacement warning. The
+        current saved game will be replaced; cancel the warning if you want to
+        keep it.
+      </p>
+
+      <h2 id="levels">Levels and strategies</h2>
+      <p>Sudokukai has six levels, each introducing a strategy to practice:</p>
+      <ul>
+        <li><strong>Easy:</strong> Naked Single.</li>
+        <li><strong>Medium:</strong> Hidden Single.</li>
+        <li><strong>Hard:</strong> Naked Pair.</li>
+        <li><strong>Advanced:</strong> Hidden Pair.</li>
+        <li><strong>Expert:</strong> X-Wing.</li>
+        <li><strong>Master:</strong> XY-Wing.</li>
+      </ul>
+      <p>
+        Easy is available immediately. Each later level requires three
+        completed games at every preceding level. For example, Hard remains
+        locked until you complete at least three Easy games and three Medium
+        games. Home shows your progress toward the next level.
+      </p>
+
+      <h2 id="learn">Learn a strategy before you play</h2>
+      <p>
+        On Home, choose a level and open <strong>Learn</strong> beneath the
+        level selector. You will see a visual example on a Sudoku grid and a
+        short explanation of the selected strategy. Use it to get familiar
+        with the pattern before starting a puzzle.
+      </p>
+
+      <h2 id="notes-and-hints">Notes and hints</h2>
+      <ul>
+        <li>
+          Select <strong>Notes</strong> to enter or remove candidate digits
+          instead of final answers. If automatic note cleanup is enabled,
+          placing a final digit removes that candidate from related cells.
+        </li>
+        <li>
+          Select <strong>Hint</strong> to highlight where to look. Then select
+          <strong>Answer</strong> to reveal the logical step and its explanation.
+          Select <strong>Apply</strong> when it is offered to apply that step to
+          the board.
+        </li>
+      </ul>
+
+      <h2 id="multi-select">Multi-select: edit notes across several cells</h2>
+      <p>
+        Use multi-select to update candidate notes in a group of empty cells
+        without editing each cell separately.
+      </p>
+      <ol>
+        <li>Turn on <strong>Notes</strong> during a game.</li>
+        <li>
+          Drag your finger across the empty cells you want to select. Cells
+          with final digits or puzzle clues are skipped.
+        </li>
+        <li>
+          Lift your finger to keep the group selected. Tap another empty cell
+          to add it, or tap a selected cell to remove it from the group. You can
+          also drag across more cells to extend the selection.
+        </li>
+        <li>
+          Tap a candidate digit to add it to every selected cell. If all
+          selected cells already contain that note, tapping the digit removes
+          it from the whole group instead.
+        </li>
+      </ol>
+      <p>
+        To clear all notes from the selected cells at once, tap
+        <strong>Erase</strong> while the group is selected.
+      </p>
+      <p>
+        Turn off <strong>Notes</strong> to leave multi-select and return to
+        entering final answers. Multi-select is unavailable while a hint is
+        active.
+      </p>
+
+      <h2 id="number-pad">Read the number pad</h2>
+      <p>
+        The small dots beside each digit show how many instances of that digit
+        remain to be placed. Once a digit is complete, its input is disabled.
+        These indicators also appear beside candidate digits during multi-select.
+      </p>
+
+      <h2 id="statistics">Track your progress</h2>
+      <p>Open <strong>Statistics</strong> to see:</p>
+      <ul>
+        <li>the number of games completed and games started;</li>
+        <li>your best recorded time and best times by level;</li>
+        <li>hints used across completed games; and</li>
+        <li>the strategies used through hints and how often each was used.</li>
+      </ul>
+      <p>
+        Strategy usage reflects your use of hints, rather than every technique
+        you apply on your own. Statistics are stored locally on your device.
+      </p>
+
+      <h2 id="settings">Customize your game</h2>
+      <p>Open <strong>Settings</strong> to adjust:</p>
+      <ul>
+        <li>
+          <strong>Theme:</strong> choose Light, Dark, or System to follow your
+          device appearance.
+        </li>
+        <li>
+          <strong>Language:</strong> use System default or choose English,
+          Ukrainian, Spanish, Portuguese (Brazil), French, German, Italian,
+          Polish, Dutch, Czech, Turkish, Indonesian, Vietnamese, or Russian.
+        </li>
+        <li><strong>Sound</strong> and <strong>Haptics:</strong> turn each on or off.</li>
+        <li><strong>Show timer:</strong> show or hide time values.</li>
+        <li>
+          <strong>Highlight same numbers:</strong> highlight matching digits
+          when you select a filled cell.
+        </li>
+        <li>
+          <strong>Highlight row, column and box:</strong> highlight the groups
+          related to your selected cell.
+        </li>
+        <li>
+          <strong>Clean notes automatically:</strong> remove matching candidate
+          notes from related cells when you place a final digit.
+        </li>
+      </ul>
+
+      <h2>Startup and storage troubleshooting</h2>
+      <ul>
+        <li>
+          If Sudokukai says that the puzzle database could not be opened, check
+          that the device has available storage and select
+          <strong>Retry</strong>.
+        </li>
+        <li>
+          If a game does not open or a local operation fails, return to Home and
+          try again. Avoid clearing app data or uninstalling while you are
+          trying to preserve a saved game.
+        </li>
+        <li>
+          On the unexpected-error screen, try <strong>Retry</strong> first.
+          <strong>Restart app state</strong> resets temporary in-memory state
+          without intentionally deleting saved games or settings.
+        </li>
+      </ul>
+
+      <h2>Local data</h2>
+      <p>
+        Games, settings, progress, and statistics are stored locally on your
+        device. Sudokukai has no account or cloud synchronization, so support
+        cannot view or restore this data. Clearing app data or uninstalling the
+        app may remove it. Depending on your system settings, the operating
+        system may include local app data in a device backup and restore it.
+      </p>
+
+      <h2>Report a defect</h2>
+      <p>Please include:</p>
+      <ul>
+        <li>the Sudokukai version;</li>
+        <li>iOS or Android version and device model;</li>
+        <li>the steps that reproduce the problem;</li>
+        <li>what you expected and what happened instead; and</li>
+        <li>a screenshot only if it is useful and safe to share.</li>
+      </ul>
+      <p>
+        Do not send passwords, authentication codes, payment-card details,
+        private database files, or other unnecessary sensitive information.
+      </p>
+
+      <h2>Contact and response time</h2>
+      <p>
+        Email:
+        <a class="contact" href="mailto:volodymyr.vdovyn@gmail.com"
+          >volodymyr.vdovyn@gmail.com</a
+        >
+      </p>
+      <p>
+        Support is available in English and Ukrainian. We aim to respond within
+        five business days.
+      </p>
+
+      <h2>Accessibility support</h2>
+      <p>
+        To report an accessibility barrier or request accessibility assistance,
+        email
+        <a class="contact" href="mailto:volodymyr.vdovyn@gmail.com?subject=Sudokukai%20accessibility"
+          >volodymyr.vdovyn@gmail.com</a
+        > with “Accessibility” in the subject. Describe the task, the barrier,
+        your device model, operating-system version, and any assistive
+        technology you use. Do not include sensitive information.
+      </p>
+
+      <h2>Privacy</h2>
+      <p>
+        Read the <a href="../privacy/">Privacy Policy</a> to learn how Sudokukai
+        handles data.
+      </p>
+    </main>
+
+    <sudokukai-footer></sudokukai-footer>
+  </body>
+</html>
