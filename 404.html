@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Page not found · Sudokukai</title>
+    <link
+      rel="icon"
+      href="./assets/icon-light.png"
+      type="image/png"
+      media="(prefers-color-scheme: light)"
+      data-theme-icon="light"
+    />
+    <link
+      rel="icon"
+      href="./assets/icon-dark.png"
+      type="image/png"
+      media="(prefers-color-scheme: dark)"
+      data-theme-icon="dark"
+    />
+    <script src="./components/theme.js"></script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./components/header.js" defer></script>
+    <script src="./components/footer.js" defer></script>
+  </head>
+  <body class="not-found-page">
+    <sudokukai-header></sudokukai-header>
+
+    <main class="document">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p>The page you requested does not exist.</p>
+      <div class="actions"><a class="button" href="./">Return home</a></div>
+    </main>
+
+    <sudokukai-footer></sudokukai-footer>
+  </body>
+</html>

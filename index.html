@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Official support and privacy information for the Sudokukai mobile app."
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#000000"
+    />
+    <title>Sudokukai</title>
+    <link
+      rel="icon"
+      href="./assets/icon-light.png"
+      type="image/png"
+      media="(prefers-color-scheme: light)"
+      data-theme-icon="light"
+    />
+    <link
+      rel="icon"
+      href="./assets/icon-dark.png"
+      type="image/png"
+      media="(prefers-color-scheme: dark)"
+      data-theme-icon="dark"
+    />
+    <script src="./components/theme.js"></script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./components/footer.js" defer></script>
+  </head>
+  <body class="home-page">
+    <sudokukai-theme-toggle class="home-theme-toggle"></sudokukai-theme-toggle>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Sudoku, thoughtfully made</p>
+          <h1>Sudokukai</h1>
+          <p class="lead">
+            Enter the Sudoku dojo.
+          </p>
+          <div class="actions">
+            <a class="button" href="./support/">Get support</a>
+            <a class="button secondary" href="./privacy/"
+              >Read the privacy policy</a
+            >
+          </div>
+        </div>
+        <picture>
+          <img
+            class="hero-logo theme-image--light"
+            src="./assets/icon-light.png"
+            alt="Sudokukai app icon"
+            width="180"
+            height="180"
+          />
+          <img
+            class="hero-logo theme-image--dark"
+            src="./assets/icon-dark.png"
+            alt="Sudokukai app icon"
+            width="180"
+            height="180"
+          />
+        </picture>
+      </section>
+
+      <section class="card-grid" aria-label="About Sudokukai">
+        <article class="card">
+          <h2>Play offline</h2>
+          <p>
+            Your games, settings, and statistics stay on your device. Just open
+            the app and start playing.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Need help?</h2>
+          <p>
+            Contact support and view the publisher's details.
+          </p>
+          <a href="./support/">Open Support</a>
+        </article>
+      </section>
+    </main>
+
+    <sudokukai-footer></sudokukai-footer>
+  </body>
+</html>
