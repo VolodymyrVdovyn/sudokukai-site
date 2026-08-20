@@ -23,6 +23,7 @@
   --border: #d1d5db;
   --subtle-border: #e5e7eb;
   --accent: #000000;
+  --accent-hover: #242424;
   --accent-text: #ffffff;
   --control-hover: #f3f4f6;
   --content-width: 760px;
@@ -41,6 +42,7 @@
   --border: #374151;
   --subtle-border: #1f2937;
   --accent: #ffffff;
+  --accent-hover: #e5e7eb;
   --accent-text: #000000;
   --control-hover: #111214;
 }
@@ -54,6 +56,7 @@
     --border: #374151;
     --subtle-border: #1f2937;
     --accent: #ffffff;
+    --accent-hover: #e5e7eb;
     --accent-text: #000000;
     --control-hover: #111214;
   }
@@ -348,20 +351,43 @@ li {
 }
 
 .button {
+  align-items: center;
   background: var(--accent);
   border: 1px solid var(--accent);
   border-radius: 10px;
   color: var(--accent-text);
-  display: inline-block;
+  display: inline-flex;
   font-weight: 700;
+  justify-content: center;
+  min-height: 48px;
   padding: 11px 16px;
+  text-align: center;
   text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.button:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
 }
 
 .button.secondary {
   background: transparent;
   border-color: var(--border);
   color: var(--text);
+}
+
+.button.secondary:hover {
+  background: var(--control-hover);
+  border-color: var(--text);
 }
 
 .card-grid {
@@ -608,6 +634,15 @@ li {
     width: 112px;
   }
 
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actions .button {
+    width: 100%;
+  }
+
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -616,5 +651,9 @@ li {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .button {
+    transition: none;
   }
 }
