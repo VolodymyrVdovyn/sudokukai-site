@@ -441,17 +441,87 @@ li {
   }
 
   .brand-header__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 14px 20px;
   }
 
   .brand-header__controls {
+    display: contents;
+  }
+
+  .brand-header__brand {
+    font-size: 26px;
     grid-column: 1;
-    grid-row: auto;
-    margin-top: 12px;
+    grid-row: 1;
+  }
+
+  .brand-header__tagline {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 4px;
+  }
+
+  .brand-header__controls .nav-links {
+    gap: 16px;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 8px;
+  }
+
+  .brand-header__controls > sudokukai-theme-toggle {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .nav-links a {
+    align-items: center;
+    display: inline-flex;
+    min-height: 44px;
+  }
+
+  .theme-toggle {
+    height: 44px;
+    width: 44px;
   }
 
   main {
-    padding-top: 48px;
+    padding: 30px 20px 64px;
+  }
+
+  .document {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .document h1,
+  .document h2,
+  .document h3,
+  .document .eyebrow {
+    font-family:
+      "JetBrains Mono", ui-monospace, "SFMono-Regular", "SF Mono", Menlo,
+      Consolas, monospace;
+  }
+
+  .document h1 {
+    font-size: 2rem;
+  }
+
+  .document .lead {
+    font-size: 1.12rem;
+    line-height: 1.55;
+  }
+
+  .document h2 {
+    font-size: 1.2rem;
+    margin-top: 38px;
+  }
+
+  .footer-inner {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
   }
 
   .hero {
