@@ -18,3 +18,14 @@ Sudokukai is an offline-first Sudoku game for iOS and Android.
 
 The site is static. It uses small JavaScript web components for the shared
 header and footer and contains no forms or cookies.
+
+## Opening pages from the mobile app
+
+Pass the app's active theme in the page URL so Support and Privacy match the
+app immediately:
+
+- `https://volodymyrvdovyn.github.io/sudokukai-site/support/?theme=light`
+- `https://volodymyrvdovyn.github.io/sudokukai-site/privacy/?theme=dark`
+
+Only `light` and `dark` are accepted. The URL value takes precedence over a
+previous website preference and is saved for navigation between site pages.

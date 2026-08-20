@@ -1,6 +1,11 @@
 const themeStorageKey = "sudokukai-theme";
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+function getUrlTheme() {
+  const theme = new URLSearchParams(window.location.search).get("theme");
+  return theme === "light" || theme === "dark" ? theme : null;
+}
+
 function getStoredTheme() {
   try {
     const storedTheme = localStorage.getItem(themeStorageKey);
@@ -13,7 +18,11 @@ function getStoredTheme() {
 }
 
 function getTheme() {
-  return getStoredTheme() ?? (systemTheme.matches ? "dark" : "light");
+  return (
+    getUrlTheme() ??
+    getStoredTheme() ??
+    (systemTheme.matches ? "dark" : "light")
+  );
 }
 
 function applyTheme(theme) {
@@ -29,6 +38,16 @@ function applyTheme(theme) {
   document.dispatchEvent(
     new CustomEvent("sudokukai-theme-change", { detail: theme }),
   );
+}
+
+const urlTheme = getUrlTheme();
+
+if (urlTheme !== null) {
+  try {
+    localStorage.setItem(themeStorageKey, urlTheme);
+  } catch {
+    // The URL theme still applies if storage is unavailable.
+  }
 }
 
 applyTheme(getTheme());
