@@ -41,7 +41,15 @@ class SudokukaiHeader extends HTMLElement {
           </a>
           <p class="brand-header__tagline">Enter the Sudoku dojo.</p>
           <div class="brand-header__controls">
-            <div class="nav-links">${links}</div>
+            <div class="nav-links desktop-nav">${links}</div>
+            <details class="mobile-nav">
+              <summary class="mobile-nav__toggle" aria-label="Navigation menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              </summary>
+              <div class="nav-links mobile-nav__panel">${links}</div>
+            </details>
             <sudokukai-theme-toggle></sudokukai-theme-toggle>
           </div>
         </nav>

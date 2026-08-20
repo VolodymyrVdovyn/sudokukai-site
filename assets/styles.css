@@ -168,6 +168,10 @@ sudokukai-theme-toggle {
   color: var(--text);
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .brand-header {
   border-bottom: 0;
 }
@@ -441,7 +445,8 @@ li {
   }
 
   .brand-header__inner {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    column-gap: 8px;
     padding: 14px 20px;
   }
 
@@ -450,7 +455,7 @@ li {
   }
 
   .brand-header__brand {
-    font-size: 26px;
+    font-size: clamp(22px, 6.9vw, 26px);
     grid-column: 1;
     grid-row: 1;
   }
@@ -461,11 +466,78 @@ li {
     margin-top: 4px;
   }
 
-  .brand-header__controls .nav-links {
-    gap: 16px;
-    grid-column: 1 / -1;
-    grid-row: 3;
-    margin-top: 8px;
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    position: relative;
+  }
+
+  .mobile-nav__toggle {
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--subtle-border);
+    border-radius: 10px;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    list-style: none;
+    width: 44px;
+  }
+
+  .mobile-nav__toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav__toggle:hover,
+  .mobile-nav[open] .mobile-nav__toggle {
+    background: var(--control-hover);
+    border-color: var(--border);
+  }
+
+  .mobile-nav__toggle:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+  }
+
+  .mobile-nav__toggle svg {
+    fill: none;
+    height: 20px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-width: 1.8;
+    width: 20px;
+  }
+
+  .mobile-nav__panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+    flex-direction: column;
+    gap: 2px;
+    min-width: 168px;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    z-index: 10;
+  }
+
+  .mobile-nav__panel a {
+    border-radius: 8px;
+    padding: 0 12px;
+  }
+
+  .mobile-nav__panel a:hover,
+  .mobile-nav__panel a[aria-current="page"] {
+    background: var(--control-hover);
   }
 
   .brand-header__controls > sudokukai-theme-toggle {
