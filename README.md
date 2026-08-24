@@ -19,6 +19,10 @@ Sudokukai is an offline-first Sudoku game for iOS and Android.
 The site is static. It uses small JavaScript web components for the shared
 header and footer and contains no forms or cookies.
 
+GitHub Pages serves the checked-in static files from the repository. Pushing
+changes to the configured publishing branch can therefore update the public
+site; review local changes before pushing them.
+
 ## Opening pages from the mobile app
 
 Pass the app's active theme in the page URL so Support and Privacy match the

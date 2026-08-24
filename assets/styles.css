@@ -279,6 +279,10 @@ main {
   width: 100%;
 }
 
+.support-page main {
+  justify-content: flex-start;
+}
+
 .home-page .hero {
   min-height: auto;
 }
